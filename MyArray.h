@@ -34,8 +34,8 @@ public:
 
 	int len() const { return this->m_length; }
 	
-	int even_num_prod() const {
-		int prod = 1;
+	T even_num_prod() const {
+		T prod = 1;
 
 		for (int i = 1; i < this->m_length; i += 2)
 			prod *= this->m_data[i];
@@ -43,8 +43,9 @@ public:
 		return prod;
 	}
 
-	int sum_betw_zeros() const {
-		int sum = 0, i, a, b;
+	T sum_betw_zeros() const {
+		T sum = 0;
+		int i, a, b;
 		
 		for (i = 0, a = i; this->m_data[i] != 0; i++)
 			a = i;
